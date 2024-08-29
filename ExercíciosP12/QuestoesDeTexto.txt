@@ -1,0 +1,9 @@
+1.
+Na linha 21 ele resulta em apenas mostrar a varíavel aluno(no caso o seu valor, que nesse caso é uma string), já na linha 23 ele apresenta o resultado da varíavel aluno com as iniciais maiúsculas. Caso ocorresse a substituição ocorreria um erro pois a variável nome apenas existe no escopo da função iniciais.
+
+2.
+As funções com retorno são aquelas que não são do tipo void . O valor retornado da função aleat() está sendo guardado em uma variável x e depois disso estrá sendo dobrado pela função dobro(x). O parâmetro usado é uma variável x, ela está sendo utilizada em todas as funções que pedem um parâmetro.
+
+3.
+A primeira função não funciona pois o parâmetro dela é um void, e até onde eu sei isso não funciona.
+A segunda função serve para criar uma seed para geração de números aleatórios.
