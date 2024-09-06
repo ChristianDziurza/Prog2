@@ -1,31 +1,31 @@
 #include <iostream>
 using namespace std;
 
-#define N 10
+void InverteVetor(int *vetor, int pos);
 
-
-void InverteVetor(int *vetor[N]);
-
-int main(){
-    int v[N];
-    int *p;
-    p = &v[N];
-    for(int i = 0; i < N; i++){
+int main()
+{
+    int n = 4;
+    int v[n];
+    for(int i = 0; i < n; i++){
+        cout << "De as entradas do vetor: " << endl;
         cin >> v[i];
-        cout << "Vetor: " << v[i] << endl;
     }
-    InverteVetor(&p);
-
+    
+    InverteVetor(v, n);
 
     return 0;
 }
 
-void InverteVetor(int *vetor[N]){
-    int c[N];
-    for(int i = N; i >= 0; i--){
-        c[i] = *vetor[i];
+void InverteVetor(int *vetor, int pos){
+    int aux, tamanho = pos - 1, tamanho2 = pos;
+    for(pos = 0; pos <= tamanho; pos++){
+        aux = vetor[pos];
+        vetor[pos] = vetor[tamanho];
+        vetor[tamanho] = aux;
+        tamanho--;
     }
-    for(int i = 0; i < N; i++){
-        cout << "Vetor invertido: " << c[i];
+    for(pos = 0; pos < tamanho2; pos++){
+        cout << "Aqui esta o vetor invertido: " << vetor[pos] << endl;
     }
 }
