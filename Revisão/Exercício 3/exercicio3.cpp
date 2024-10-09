@@ -18,5 +18,7 @@ int main(){
         i++;
     }
     cout << "Soma de todos os elementos do vetor: " << soma << endl;
+    delete[] v;
+    v = NULL;
     return 0;
 }
